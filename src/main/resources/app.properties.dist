@@ -1,0 +1,29 @@
+server.port = 8081
+
+#DB
+db.driver = org.postgresql.Driver
+db.url = jdbc:postgresql://localhost:5432/database
+db.username = user
+db.password = password
+
+#Hibernate Configuration:
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+hibernate.show_sql=true
+hibernate.hbm2ddl.auto =update
+hibernate.enable_lazy_load_no_trans=true
+hibernate.id.new_generator_mappings=true
+spring.jpa.hibernate.ddl-auto = update
+entitymanager.packages.to.scan = ru.kpfu.itis.models
+
+#Thymeleaf
+spring.thymeleaf.prefix= /WEB-INF/views
+spring.thymeleaf.suffix=.html
+spring.thymeleaf.enabled=true
+spring.thymeleaf.mode=HTML
+
+#?
+spring.jpa.open-in-view = false
+spring.main.allow-bean-definition-overriding=true
+spring.main.allow-circular-references=true
+
+uploadPath = path

@@ -1,0 +1,74 @@
+.footer {
+    text-align: center;
+}
+
+.password-control {
+    position: relative;
+    left: 70px;
+}
+
+.lblPassword {
+    position: relative;
+    left: 65px;
+}
+
+#password {
+    position: relative;
+    left: 68px;
+}
+
+#birthday {
+    position: relative;
+    right: 7px;
+}
+
+.adminImages {
+    display: inline-block;
+    background: black;
+}
+
+.btn {
+    margin-right: 10px;
+    border-radius: 5px;
+"
+}
+
+
+.adminProduct {
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    width: 1400px;
+}
+
+.listOrders {
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    width: 500px;
+
+}
+
+.listUsers {
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    width: 300px;
+}
+
+.imageList {
+    display: inline-flex;
+
+}
+
+.orders {
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    width: 500px;
+}
+

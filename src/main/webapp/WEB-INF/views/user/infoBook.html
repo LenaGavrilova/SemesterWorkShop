@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация</title>
+    <script src="/assets/js/index.js"></script>
+    <link href="/assets/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <p class="navbar-brand"><h1>MyBook</h1> Книжный онлайн магазин </p>
+        <div class="d-flex">
+            <a class="nav-link" href="/index">Вернуться на главную</a>
+        </div>
+    </div>
+</nav>
+<p th:href="@{/book/info/{id}=(id=${book.getId()})}" th:text="${book.getTitle()}"/>
+<p th:text="'Описание: ' + ${book.getDescription()}" />
+<p th:text="'Цена: ' + ${book.getPrice()}" />
+<p th:text="'Издательство: ' + ${book.getPublishingHouse()}" />
+<p th:text="'Категория товара:' + ${book.getCategory().getName()}" />
+
+<div th:each="img : ${book.getImageList()}">
+    <img th:src="'/img/' + ${img.getFileName()}">
+</div>
+<div th:replace="/footer.html :: footer"/>
+</body>
+</html>

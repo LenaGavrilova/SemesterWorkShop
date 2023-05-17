@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список заказов</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="/assets/js/index.js"></script>
+    <link href="/assets/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <p class="navbar-brand">
+        <h1>MyBook</h1> Книжный онлайн магазин </p>
+        <div class="d-flex">
+            <a class="nav-link" href="/admin">Вернуться назад</a>
+        </div>
+    </div>
+</nav>
+
+<div class="h3">Список заказов:</div>
+<div class="list">
+    <div class="listOrders" th:each="orders : ${ordersList}">
+
+
+        <p th:text="'Номер заказа: ' + ${orders.getNumber()}"/>
+        <p th:text="'ID пользователя: ' + ${orders.getUser().getId()}"/>
+        <p th:text="'Логин пользователя: ' + ${orders.getUser().getLogin()}"/>
+        <p th:text="'Дата заказа: ' + ${#temporals.format(orders.getDateTime(), 'dd-MMM-yyyy')}"/>
+        <a th:href="@{/admin/editStatus/{id}(id=${orders.getId()})}">Содержимое заказа</a>
+        <a th:href="@{/admin/editStatus/{id}(id=${orders.getId()})}">Изменить статус заказа</a>
+        <br>
+    </div>
+</div>
+<div th:replace="/footer.html :: footer"/>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>404</title>
+    <link type="text/css" rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="error">
+    <p th:text="${errorTitle}"/>
+    <p th:text="${errorDescription}"/>
+    <p th:text="${title}"/>
+    <p th:text="${exception}"/>
+    <p th:text="${url}"/>
+</div>
+</body>
+</html>
